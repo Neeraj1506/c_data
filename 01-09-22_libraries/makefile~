@@ -1,0 +1,18 @@
+all: 
+	gcc -o main main.c first.c sec.c
+
+setpath:
+	export LD_LIBRARY_PATH=$(pwd):$LD_LIBRARY_PATH
+
+libdynamic:
+	gcc -c -Wall -Werror -fPIC first.c sec.c
+	gcc -shared -o libsh.so first.o sec.o
+
+libstatic:
+	ar -crv libni.a first.o sec.o
+	
+obj:
+	gcc -c first.c sec.c
+
+clean:
+	rm main *.o

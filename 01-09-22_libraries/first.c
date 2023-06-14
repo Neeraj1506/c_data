@@ -1,0 +1,22 @@
+#include "declare.h"
+
+/*******************************************************************************
+ Function Name - 	int first_func(char *arg1)					
+ 
+ @Argument1 - Char *
+ @Argument2 - 
+ 
+ Return Val -integer
+ 
+ Programmer - NEERAJ RAWAT	 
+ 
+ Date	-	01-09-22
+ Changes - changes Description (Not applicable to initial release)
+ 
+ ******************************************************************************/  
+int first_func(char *arg1){
+    printf("Its Comes First: & Prints... \n %s\n", arg1);
+    return 1;
+}
+
+

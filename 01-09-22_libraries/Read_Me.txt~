@@ -1,0 +1,30 @@
+        ###          STATIC & DYNAMIC(SHARED0) LIBRARY.             ### 
+        
+About:
+                
+            create static and shared library.
+
+
+Create Commands:
+
+   1. for Static:-             ar -crv libni.a first.o sec.o
+                  
+   2. for shared:-             gcc -c -Wall -Werror -fPIC first.c sec.c
+                               gcc -shared -o libsh.so first.o sec.o
+                               
+                               OR/
+                               
+                               gcc -shared main.c add.c -o libsh.so
+
+                  
+
+Execution Commands:
+
+                  gcc -o test main.c -L. -lni
+                  
+
+Set Path:
+
+                  export LD_LIBRARY_PATH=$(pwd):$LD_LIBRARY_PATH
+                  
+

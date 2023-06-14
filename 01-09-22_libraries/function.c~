@@ -1,0 +1,14 @@
+int first_func(char *arg1){
+    printf("Its Comes First: & Prints... \n %s\n");
+    return 1;
+}
+
+int sec_func(int arg2){
+    if(arg == 0)
+            printf("Sorry Failed.\n");
+     
+    else
+        printf("Yeah We Completed It......\n");
+  
+    return 0;
+}

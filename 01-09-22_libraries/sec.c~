@@ -1,0 +1,25 @@
+#include "declare.h"
+
+/*******************************************************************************
+ Function Name - 	int sec_func(int arg2)						
+ 
+ @Argument1 - integer
+ @Argument2 - 
+ 
+ Return Val - integer
+ 
+ Programmer - NEERAJ RAWAT	 
+ 
+ Date	-	01-09-22
+ Changes - changes Description (Not applicable to initial release)
+ 
+ ******************************************************************************/  
+int sec_func(int arg2){
+    if(arg2 == 0)
+            printf("Sorry Failed.\n");
+     
+    else
+        printf("Yeah We Completed It......\n");
+  
+    return 0;
+}

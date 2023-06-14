@@ -1,0 +1,121 @@
+/******************************************************************************\
+*           Copyright (C) 1999 Spectross Digital System (P) Ltd.
+*                           All Rights Reserved
+*------------------------------------------------------------------------------
+* SPECTROSS DIGITAL SYSTEMS PVT. LTD,
+* 4,SIRI FORT ROAD,
+* NEW DELHI-110049,
+* INDIA.
+*
+* www.spectross.com
+* support@spectross.com
+* Ph - 91-11-26264077.
+*------------------------------------------------------------------------------
+* MODULE NAME... TRAINING
+* FILENAME...... fun_demo1.c
+* DATE CREATED.. 29-08-22
+* PROJECT....... TRAINING
+* VERSION....... 1.00
+*------------------------------------------------------------------------------
+* HISTORY:	
+*   CREATED: 	NEERAJ RAWAT	Date 29-08-22		Description:    DEMONSTRATE FUNCTIONS
+*   MODIFIED:   	Rev	Author	Date		Description 
+*------------------------------------------------------------------------------
+* MODULE DESCRPTION: 
+*
+*
+*
+*
+* FUNCTIONS:Following functions are defined in this file - 
+*						1. int main(int argc, char *argv[]);
+*						2. static inline addition(int num1, int num2);
+*						3.
+*						4. 
+*
+*\******************************************************************************/
+
+#include <stdio.h>
+#include "function_header.h"
+
+/*******************************************************************************
+ Function Name - main function								
+ 
+ @Argument1 - int argc
+ @Argument2 - char *argv[]
+ 
+ Return Val - integer
+ 
+ Programmer - NEERAJ RAWAT	 
+ 
+ Date	-	29-08-22
+ Changes - changes Description (Not applicable to initial release)
+ 
+ ******************************************************************************/
+int main(int argc, char* argv[])
+{
+    while(1){
+        int choice = 0;
+        int number = 0;
+        int num1 = 0, num2 = 0;
+        
+        printf("Enter Your Choice For Demonstraton Of \n\t1. Recursion \n\t2. Call By Value With Inline \n\t3. Call By Reference \n\t0. Exit\n\n\t");
+        scanf("%d", &choice);
+        
+        switch (choice){
+            case 1:
+                printf("Enter Any Value Between 1 - 15 To Find Its Factorial Using Recursion: \n\t");
+                scanf("%d", &number);
+                
+                printf("\tFactorial of %d is %d \n\n", number, factorial(number));
+                
+                break;
+             
+            case 2:
+                printf("\tEnter Any Two Number To Add: \n\t");
+                scanf("%d %d", &num1, &num2);
+                
+                printf("\tCurrent Address At Num1 & Num2 is: %p %p \n", (void*)&num1, (void*)&num2);
+                printf("\tAdittion of these two returns: %d \n", addition(num1, num2));
+                break;
+                
+            case 3:
+                printf("\tEnter Any Two Value To Swap: \n\t");
+                scanf("%d %d", &num1, &num2);
+                
+                printf("\tCurrent Address At Num1 & Num2 is: %p %p \n", (void*)&num1, (void*)&num2);
+                swap(&num1, &num2);
+                break;
+                
+            case 0:
+                return;
+                
+            default:
+                printf("\tInvalid Option\n");
+                
+        } 
+    }
+    return 0;
+}
+
+/*******************************************************************************
+ Function Name - 	static inline addition(int num1, int num2);						
+ 
+ @Argument1 - Integer
+ @Argument2 - 
+ 
+ Return Val -  Interger
+ 
+ Programmer -   NEERAJ RAWAT	 
+ 
+ Date	-	29/08/2022
+ Changes - changes Description (Not applicable to initial release)
+ 
+ ******************************************************************************/
+ 
+static inline int addition(int num1, int num2){
+    int sum = num1 + num2;
+    printf("\tCurrent Address At Num1 & Num2 is: %p %p \n", (void*)&num1, (void*)&num2);
+    return sum;
+}            
+            
+              

@@ -1,0 +1,23 @@
+#include <stdio.h>
+int main(){
+int flag = 0 ;
+int num = 0;
+int times = 2;
+printf("enter any no.\n");
+scanf("%d",&num);
+for(times; times < (num / 2); times++){
+		if(num % times == 0){
+			flag = 1;
+			break;
+			}
+		}
+		
+if(flag == 0){
+    printf("its a prime\n ");
+    }
+else if(flag ==1){
+    printf("its not a prime \n");
+    }
+    
+   return 0;
+   }

@@ -1,0 +1,3 @@
+near: nearest_prime_no.c
+	gcc -o near nearest_prime_no.c
+    

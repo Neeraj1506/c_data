@@ -1,0 +1,5 @@
+demo: fun_demo1.c fun_demo2.c
+	gcc -o demo fun_demo1.c fun_demo2.c
+	
+clean: 
+	rm demo
